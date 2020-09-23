@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.pd.chatapp.Chat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/topmain"
+        android:background="@drawable/back"
+        android:padding="5dp">
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/back_button"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/back_button"/>
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:gravity="left"
+            android:paddingTop="15dp"
+            android:layout_toEndOf="@+id/back_button"
+            android:id="@+id/username_display"
+            android:hint="Username"
+            android:textColorHint="#fff"
+            android:textSize="25dp"
+            android:layout_toRightOf="@+id/back_button" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="50"
+        android:layout_height="0dp"
+
+        android:id="@+id/scrollView">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:id="@+id/layout1">
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/message_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+
+        android:layout_marginTop="5dp"/>
+</LinearLayout>
